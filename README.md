@@ -12,3 +12,4 @@
   - Стили [Ant Design UI](https://ant.design/)
   - Стейт менеджер [Redux tool kit](https://redux-toolkit.js.org)
 ### Проект кривой, буду рад рекомендациям и пояснениям, где можно было сделать лучше.
+- Ссылка на тестовое задание: [Avit-tech/frontend-trainee-assignment-2023](https://github.com/avito-tech/frontend-trainee-assignment-2023/tree/main)
