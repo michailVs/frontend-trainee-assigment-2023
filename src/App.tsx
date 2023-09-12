@@ -15,7 +15,7 @@ function App() {
   }
   useEffect(() => {
     let date = parseInt(localStorage.getItem('time') || '') > parseInt(new Intl.DateTimeFormat('ru', options).format(new Date()))
-    if (JSON.parse(localStorage.getItem('game') || '' ) && date) {
+    if (localStorage.getItem('game') && date) {
       setIsLoading(true)
       dispatch(actions.addGameList(JSON.parse(localStorage.getItem('game') || '')))
     } else {
