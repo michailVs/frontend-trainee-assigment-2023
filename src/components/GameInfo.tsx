@@ -39,13 +39,14 @@ export const GameInfo = () => {
                 <p>Издатель: {gameInfo.publisher} | Разработчик: {gameInfo.developer}</p>
                 <p>Дата публикации: {new Intl.DateTimeFormat('ru', dateOptions).format(new Date(gameInfo.release_date.split('-').map(el => el === '00' ? el = '01' : el).join('-')))}</p>
                 {!gameInfo.screenshots ?
-                  <div>Error</div> :
+                  <Loader/> :
                   <Carousel autoplay>
                     {gameInfo.screenshots?.map(el => (
                         <Image src={el.image} key={el.id} centered/>
                     ))}
                   </Carousel>
                 }
+                <p>Описание: {gameInfo.description}</p>
                 <div>
                   <h2>Технические требования:</h2>
                   <p>Операционная система: {gameInfo.minimum_system_requirements?.os}</p>
