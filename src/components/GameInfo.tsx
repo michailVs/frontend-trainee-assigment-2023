@@ -47,6 +47,7 @@ export const GameInfo = () => {
                   </Carousel>
                 }
                 <p>Описание: {gameInfo.description}</p>
+                {gameInfo.minimum_system_requirements ? 
                 <div>
                   <h2>Технические требования:</h2>
                   <p>Операционная система: {gameInfo.minimum_system_requirements?.os}</p>
@@ -55,6 +56,9 @@ export const GameInfo = () => {
                   <p>Видеоадаптер: {gameInfo.minimum_system_requirements?.graphics}</p>
                   <p>Хранилище данных: {gameInfo.minimum_system_requirements?.storage}</p>
                 </div>
+                :
+                <h2>Технические требования отсутвуют</h2>
+                }
             </div>
             :
             <Loader/>
